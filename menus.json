@@ -1,0 +1,23 @@
+{
+    "Almuerzos": {
+      "PRINCIPALES": [
+        "LASAGNA DE POLLO CON BROCOLY",
+        "RELLENO DE COLIFLOR",
+        "CHULETA EN SALSA DE CEBOLLA",
+        "TORTA DE PAPA",
+        "SOPA DE ARROZ AGUADO CON HUESO DE CERDO",
+        "POLLO EN SALSA JALAPEÑA"
+      ],
+      "Acompañamientos": [
+        "ARROZ CON VEGETALES",
+        "ENSALADA DE EJOTES CON JAMÓN",
+        "ENSALADA DE CODITOS"
+      ],
+      "Bebidas": [
+        "REFRESCO DE MARACUYA",
+        "VEGETALES AL VAPOR",
+        "REFRESCO DE MORA",
+        "ENSALADA FRESCA"
+      ]
+    }
+  }
