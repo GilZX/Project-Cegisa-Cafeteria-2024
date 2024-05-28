@@ -21,13 +21,19 @@ body{
 }
 .logo img{
     width: 325px;
+    color:#083D77;
+    background-color: #083D77;
+    opacity: 0.9;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#083D77;
+   /* background-color:#083D77;*/
+    background-image: url("https://static.vecteezy.com/system/resources/previews/015/776/598/non_2x/background-for-the-menu-of-restaurants-and-cafes-contour-vector.jpg");
     height: 200px;
     padding: 0 7vw;
 }
@@ -379,7 +385,8 @@ body{
 
 
 .main_slide3 .fav-food  .item{
-    background-color: aliceblue;
+    /*background-color: aliceblue;*/
+    background-image: url("https://st.depositphotos.com/1016729/3637/i/450/depositphotos_36373753-stock-photo-old-menu-background-vintage-paper.jpg");
     border-radius: 5px;
     margin-bottom: 30px;
    /*box-shadow: 0 2px 10px #cc5709;*/
@@ -424,6 +431,8 @@ body{
     border-radius: 10px;
 
   }
+
+
 
 
 

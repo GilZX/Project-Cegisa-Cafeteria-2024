@@ -56,6 +56,36 @@
     z-index: 10;
 }
 
+
+.item2 .content p:last-of-type {
+    /* Aquí van tus estilos */
+    color: orangered; /* Esto es solo un ejemplo */
+    font-weight: bold;
+    font-size: x-large;
+    text-align: center;
+}
+
+
+
+.item2 .content .availability {
+    text-align: center;
+    margin-top: 10px; 
+    font-size: 14px; 
+    color: white; 
+}
+.item2 .content .availability i {
+    margin-right: 5px; 
+}
+
+
+.item2 .content .logo {
+    display: flex;
+    margin: 10px auto; /* Centra el logo horizontalmente y agrega un margen superior */
+    opacity: 0.5; /* Aplica un efecto de transparencia */
+    transition: opacity 0.3s; /* Efecto de transición para cambios de opacidad */
+
+}
+
 @keyframes showContent {
     to{
         transform: translateY(0);
@@ -207,6 +237,43 @@ filter: brightness(1);
     padding: 10px;
     cursor: pointer;
 }
+
+.icon-container {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 20px; /* Espacio debajo de los íconos */
+    background-image: url("https://www.comedera.com/wp-content/uploads/2022/12/Desayono-americano-shutterstock_2120331371.jpg");
+}
+
+.icon-container div {
+    display: inline-block;
+    margin: 0 15px; /* Espacio entre los íconos */
+    text-align: center;
+}
+
+.icon-container a {
+    text-decoration: none;
+    color: inherit; /* Mantiene el color original del texto */
+   
+}
+
+.icon-container i {
+    font-size: 24px; /* Tamaño de los íconos */
+    display: block; /* Hace que el ícono se muestre en bloque, centrado encima del texto */
+    margin-bottom: 5px; /* Espacio entre el ícono y el texto */
+    transition: color 0.3s; /* Transición suave para el cambio de color */
+}
+
+.icon-container a:hover i {
+    color: #007BFF; /* Color de los íconos al pasar el ratón */
+}
+
+.icon-text {
+    font-size: 14px; /* Tamaño de la fuente del texto debajo de los íconos */
+    color: #333; /* Color del texto */
+}
+
+
 
 @media (max-width: 768px) {
     .content {

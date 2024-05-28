@@ -1,4 +1,7 @@
-let items=document.querySelector(' .slider .item2 ');
+
+
+
+let items=document.querySelectorAll(' .slider .item2 ');
 let next=document.getElementById('next')
 let prev=document.getElementById('prev')
 let thumbnails=document.querySelectorAll('.thumbail .item2')
@@ -19,8 +22,19 @@ next.onclick= function(){
     showSlider();
 }
 
+
+
+
+
 function showSlider(){
-    let previewItemActived=document.querySelector('.slider .List .item.active')
-    let thumbailActiveOld=document.querySelector()
-    previewItemActived.classList.remove('active')
+    let previewItemActived=document.querySelector('.slider .List .item2.active');
+
+    let thumbailActiveOld=document.querySelector('.thumbail');
+
+    previewItemActived.classList.remove('active');
+
+    //thumbailActiveOld.classList.remove('active');
+
+    items[itemActive].classList.add('active');
+
 }
