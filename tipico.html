@@ -4,14 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styletp.css">
+    <link rel="stylesheet" href="styleqr.css">
 </head>
 <body>
     
+    <div class="container">
+        <h1>Cafeteria Menu Del Dia. Escanea</h1>
+        <div id="qrcode" class="qrcode"></div>
+        <button id="download">Descargar PDF</button>
+
+    </div>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const qrCodeElement = document.getElementById('qrcode');
+            const downloadButton = document.getElementById('download');
+            
+            // Generar el código QR
+            QRCode.toCanvas(qrCodeElement, 'https://tu-url.com/menu-del-dia', function (error) {
+                if (error) console.error(error);
+                console.log('Código QR generado!');
+            });
+            
+            // Función para descargar el QR como PDF
+            downloadButton.addEventListener('click', function() {
+                const canvas = qrCodeElement.querySelector('canvas');
+                const imgData = canvas.toDataURL('image/png');
+                
+                const pdf = new jsPDF();
+                pdf.addImage(imgData, 'PNG', 15, 40, 180, 180);
+                pdf.save('menu_del_dia.pdf');
+            });
+        });
+        
 
-
-    <script src="apptp.js"></script>
+    </script>
 </body>
+
 </html>
