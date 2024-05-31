@@ -10,7 +10,9 @@
     
     <div class="container">
         <h1>Cafeteria Menu Del Dia. Escanea</h1>
-        <div id="qrcode" class="qrcode"></div>
+        <div id="qrcode" class="qrcode">
+            <img src="tu-codigo-qr.png" alt="Código QR">
+        </div>
         <button id="download">Descargar PDF</button>
 
     </div>
@@ -32,13 +34,19 @@
             // Función para descargar el QR como PDF
             downloadButton.addEventListener('click', function() {
                 const canvas = qrCodeElement.querySelector('canvas');
+                if (!canvas) {
+                    console.error('No se encontró el canvas del código QR');
+                    return;
+                }
                 const imgData = canvas.toDataURL('image/png');
                 
+                const { jsPDF } = window.jspdf;
                 const pdf = new jsPDF();
                 pdf.addImage(imgData, 'PNG', 15, 40, 180, 180);
                 pdf.save('menu_del_dia.pdf');
             });
         });
+        
         
 
     </script>
